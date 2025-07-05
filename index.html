@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Course Home Page for WDD 231" />
+  <meta name="author" content="Adriano Costa" />
+  <title>Home | WDD 231</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/course.js"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" />
+    <span>Adriano Costa</span>
+    <button id="menu-toggle" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <nav id="main-nav" class="closed">
+    <a href="#">Home</a>
+    <a href="#">Chamber Project</a>
+    <a href="#">Final Project</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about-grid">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>My name is Adriano Costa and I am a Chemistry teacher in public schools in Brazil. I have Master’s Degree in Chemistry and I am a Software Development student at BYU. I am also studying for a PhD in Education Sciences. I have degrees in Chemistry, Mathematics, Portuguese, English, Biology, Pedagogy, and Systems Analysis and Development. I really love to study!</p>
+      </div>
+      <div class="about-photo">
+        <h2>Student Photo</h2>
+        <img src="images/adriano_photo.jpeg" alt="Adriano" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Web Certificate Courses</h2>
+      <div id="course-buttons">
+        <button id="show-all">All</button>
+        <button id="show-cse">CSE</button>
+        <button id="show-wdd">WDD</button>
+      </div>
+      <div id="course-container"></div>
+      <p>The total credits for course listed above is <span id="total-credits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/adrianocjc">GitHub</a>
+      <a href="https://www.linkedin.com/in/adriano-costa-ab43b324/">LinkedIn</a>
+      <a href="#">⛔</a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> Adriano Costa • Natal • Brazil</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

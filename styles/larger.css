@@ -1,0 +1,27 @@
+@media screen and (min-width: 800px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  #course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #course-container div {
+    flex: 0 1 30%;
+  }
+}
