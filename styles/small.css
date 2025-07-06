@@ -65,6 +65,7 @@ h2 {
   border-radius: 8px;
   overflow-y: auto;       
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 .about-text h2{
@@ -89,7 +90,6 @@ h2 {
   display: inline-block;
 }
 
-
 .about-photo h2{
   width: 430px;            
   height: 30px;           
@@ -99,6 +99,25 @@ h2 {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #034078;
   color: white;
+}
+
+.photo-frame {
+  background-color: #dbe9f4;
+  padding: 1.5rem;
+  border: 2px solid #003366;
+  border-radius: 12px; /* Fully rounded corners */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+.photo-frame img {
+  display: block;
+  width: 600px;
+  height: 285px;
+  object-fit: cover;
+  border-radius: 10px; /* Optional: round the image inside too */
+  margin: auto;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -116,7 +135,7 @@ button {
 }
 
 .course-section h2 {
-  width: 1290px;            
+  width: 1300px;            
   height: 30px;           
   padding: 1rem;
   border-radius: 8px;
@@ -148,7 +167,7 @@ button {
 }
 
 footer p {
-  width: 1290px;            
+  width: 1300px;            
   height: 40px;           
   padding: 1rem;
   border-radius: 8px;
