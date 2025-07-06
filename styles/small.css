@@ -57,7 +57,7 @@ h2 {
 }
 
 .about-text p {
-  width: 950px;            
+  width: 800px;            
   height: 300px;           
   padding: 1rem;
   background-color: #dbe9f4;
@@ -68,7 +68,7 @@ h2 {
 }
 
 .about-text h2{
-  width: 950px;            
+  width: 800px;            
   height: 30px;           
   padding: 1rem;
   border-radius: 8px;
@@ -116,7 +116,7 @@ button {
 }
 
 .course-section h2 {
-  width: 1440px;            
+  width: 1290px;            
   height: 30px;           
   padding: 1rem;
   border-radius: 8px;
@@ -138,10 +138,17 @@ button {
   color: #034078;
   margin-right: 1rem;
   text-decoration: none;
+  font-size: larger;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
 }
 
 footer p {
-  width: 1440px;            
+  width: 1290px;            
   height: 40px;           
   padding: 1rem;
   border-radius: 8px;
