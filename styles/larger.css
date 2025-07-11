@@ -1,4 +1,4 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   nav {
     display: flex !important;
     flex-direction: row;
@@ -13,6 +13,12 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-text, .about-photo {
+    flex: 1;
   }
 
   #course-container {
