@@ -29,6 +29,7 @@
 
   #course-container div {
     flex: 0 1 30%;
+    text-align: center;
   }
   
  #course-buttons {

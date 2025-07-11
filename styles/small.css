@@ -6,6 +6,7 @@ body {
 
 header, nav, main, footer {
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 header {
@@ -14,10 +15,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 header img {
   width: 100px;
+  height: auto;
 }
 
 #menu-toggle {
@@ -25,12 +28,15 @@ header img {
   color: white;
   border: none;
   font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 nav {
   display: none;
   flex-direction: column;
   background: #d4e3f5;
+  width: 100%;
 }
 
 nav.open {
@@ -45,10 +51,6 @@ nav a {
 
 h2 {
   color: #034078;
-}
-
-h2 {
-  color: #034078;
   text-align: center;
 }
 
@@ -59,26 +61,35 @@ h2 {
 }
 
 .about-text p {
-  width: 800px;            
-  height: 300px;           
+  width: 100%;
+  max-width: 800px;
+  height: 555px;
   padding: 1rem;
   background-color: #dbe9f4;
   border: 2px solid #003366;
   border-radius: 8px;
-  overflow-y: auto;       
+  overflow-y: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.about-text h2{
-  width: 805px;            
-  height: 30px;           
+.about-text h2 {
+  width: 100%;
+  max-width: 805px;
+  height: min-height 30px;
   padding: 1rem;
   border-radius: 8px;
-  overflow-y: auto;       
+  overflow-y: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #034078;
   color: white;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
 }
 
 .about-photo {
@@ -86,30 +97,38 @@ h2 {
 }
 
 .about-photo img {
-  max-width: 60%;
+  max-width: 100%;
   height: auto;
   border-radius: 6px;
   display: inline-block;
 }
 
-.about-photo h2{
-  width: 430px;            
-  height: 30px;           
+.about-photo h2 {
+  width: 100%;
+  max-width: 430px;
+  height: min-height 30px;
   padding: 1rem;
   border-radius: 8px;
-  overflow-y: auto;       
+  overflow-y: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #034078;
   color: white;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
 }
 
 .photo-frame {
   background-color: #dbe9f4;
   padding: 1.5rem;
   border: 2px solid #003366;
-  border-radius: 12px; /* Fully rounded corners */
+  border-radius: 12px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
   display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .photo-frame img {
@@ -117,7 +136,7 @@ h2 {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 10px; /* Optional: round the image inside too */
+  border-radius: 10px;
   margin: auto;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
@@ -137,14 +156,17 @@ button {
 }
 
 .course-section h2 {
-  width: 1300px;            
-  height: 30px;           
+  width: 100%;
+  max-width: 1300px;
+  height: min-height 30px;
   padding: 1rem;
   border-radius: 8px;
-  overflow-y: auto;       
+  overflow-y: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #034078;
   color: white;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .course-section p {
@@ -169,15 +191,16 @@ button {
 }
 
 footer p {
-  width: 1300px;            
-  height: 40px;           
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
   padding: 1rem;
   border-radius: 8px;
-  overflow-y: auto;       
+  overflow-y: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #034078;
   color: white;
   text-align: center;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
+  box-sizing: border-box;
 }
-
