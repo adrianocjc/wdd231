@@ -32,30 +32,30 @@
     text-align: center;
   }
   
- #course-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem auto;
-  max-width: 950px;
-}
+  #course-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 950px;
+  } 
 
-#course-buttons button {
-  flex: 1 1 250px;
-  height: 50px;
-  font-size: 1rem;
-  background-color: #005a9c;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.2s;
-  cursor: pointer;
-}
+ #course-buttons button {
+    flex: 1 1 250px;
+    height: 50px;
+    font-size: 1rem;
+    background-color: #005a9c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+  }
 
-#course-buttons button:hover {
-  background-color: #003e73;
-  transform: scale(1.03);
-}
+  #course-buttons button:hover {
+    background-color: #003e73;
+    transform: scale(1.03);
+  }
 }
