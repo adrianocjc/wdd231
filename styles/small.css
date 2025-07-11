@@ -53,7 +53,9 @@ h2 {
 }
 
 .about-grid {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .about-text p {
@@ -112,8 +114,8 @@ h2 {
 
 .photo-frame img {
   display: block;
-  width: 600px;
-  height: 285px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px; /* Optional: round the image inside too */
   margin: auto;
