@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Sunrise Bakery",
+    "address": "123 Main St",
+    "phone": "555-1234",
+    "website": "https://sunrisebakery.com",
+    "image": "images/bakery.jpg",
+    "membership": 3
+  },
+  {
+    "name": "GreenTech Innovations",
+    "address": "456 Oak Ave",
+    "phone": "555-5678",
+    "website": "https://greentech.io",
+    "image": "images/greentech.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Ocean Real Estate",
+    "address": "789 Seaside Blvd",
+    "phone": "555-9012",
+    "website": "https://oceanrealty.net",
+    "image": "images/oceanrealty.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Peak Fitness",
+    "address": "321 Mountain Rd",
+    "phone": "555-3456",
+    "website": "https://peakfitness.org",
+    "image": "images/fitness.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Valley Bookstore",
+    "address": "654 Elm St",
+    "phone": "555-7890",
+    "website": "https://valleybooks.com",
+    "image": "images/bookstore.jpg",
+    "membership": 2
+  },
+  {
+    "name": "TechNest Co.",
+    "address": "987 Hightech Pkwy",
+    "phone": "555-2345",
+    "website": "https://technest.io",
+    "image": "images/technest.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Bloom Florals",
+    "address": "159 Rose St",
+    "phone": "555-6789",
+    "website": "https://bloomflorals.com",
+    "image": "images/florals.jpg",
+    "membership": 2
+  }
+]
