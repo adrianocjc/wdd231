@@ -80,7 +80,7 @@ h2 {
 .about-text h2 {
   width: 100%;
   max-width: 805px;
-  height: min-height 30px;
+  min-height: 30px;
   padding: 1rem;
   border-radius: 8px;
   overflow-y: auto;
@@ -106,7 +106,7 @@ h2 {
 .about-photo h2 {
   width: 100%;
   max-width: 430px;
-  height: min-height 30px;
+  min-height: 30px;
   padding: 1rem;
   border-radius: 8px;
   overflow-y: auto;
@@ -158,7 +158,7 @@ button {
 .course-section h2 {
   width: 100%;
   max-width: 1300px;
-  height: min-height 30px;
+  min-height: 30px;
   padding: 1rem;
   border-radius: 8px;
   overflow-y: auto;
