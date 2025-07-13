@@ -1,28 +1,32 @@
-// Footer Information
-const yearSpan = document.getElementById("year");
-const lastModifiedSpan = document.getElementById("lastModified");
-yearSpan.textContent = new Date().getFullYear();
-lastModifiedSpan.textContent = document.lastModified;
+// Footer Info
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
 
-// Directory Controls
-const membersContainer = document.getElementById("members");
+// DOM References
 const gridBtn = document.getElementById("gridView");
 const listBtn = document.getElementById("listView");
+const membersContainer = document.getElementById("members");
 
-// Load Members Data
-async function getMembers() {
+// Membership Labels
+const levels = {
+  1: "Member",
+  2: "Silver",
+  3: "Gold"
+};
+
+// Load Data
+async function loadMembers() {
   try {
-    const response = await fetch("data/members.json");
-    if (!response.ok) throw new Error("Failed to fetch member data.");
-    const members = await response.json();
+    const res = await fetch("data/members.json");
+    const members = await res.json();
     displayMembers(members);
   } catch (error) {
-    membersContainer.textContent = "⚠️ Unable to load directory at this time.";
+    membersContainer.textContent = "⚠️ Unable to load directory.";
     console.error(error);
   }
 }
 
-// Display Members as Cards
+// Render Members
 function displayMembers(members) {
   membersContainer.innerHTML = "";
   members.forEach(member => {
@@ -34,26 +38,21 @@ function displayMembers(members) {
       <p>📍 ${member.address}</p>
       <p>📞 ${member.phone}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
-      <p>💎 Membership Level: ${member.membership}</p>
+      <p>💎 ${levels[member.membership]}</p>
     `;
     membersContainer.appendChild(card);
   });
 }
 
-// View Toggle Controls
+// View Toggle (CodePen style)
 gridBtn.addEventListener("click", () => {
-  membersContainer.className = "grid";
-  membersContainer.querySelectorAll(".member-list").forEach(card => {
-    card.className = "member-card";
-  });
+  membersContainer.classList.add("grid");
+  membersContainer.classList.remove("list");
 });
 
 listBtn.addEventListener("click", () => {
-  membersContainer.className = "list";
-  membersContainer.querySelectorAll(".member-card").forEach(card => {
-    card.className = "member-list";
-  });
+  membersContainer.classList.add("list");
+  membersContainer.classList.remove("grid");
 });
 
-// Initialize on Load
-getMembers();
+loadMembers();

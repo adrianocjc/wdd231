@@ -1,3 +1,4 @@
+/* === Reset and Base === */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +7,12 @@ body {
   color: #333;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Header === */
 header {
   background-color: #003366;
   color: white;
@@ -18,6 +25,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 nav a {
@@ -30,6 +38,7 @@ nav a.active {
   border-bottom: 2px solid white;
 }
 
+/* === Hero === */
 .hero {
   position: relative;
   text-align: center;
@@ -37,7 +46,7 @@ nav a.active {
 
 .hero img {
   width: 100%;
-  height: auto;
+  display: block;
 }
 
 .cta-button {
@@ -52,8 +61,10 @@ nav a.active {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+/* === View Toggle Buttons === */
 .view-toggle {
   text-align: center;
   margin: 1rem;
@@ -65,74 +76,72 @@ nav a.active {
   background-color: #005f99;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.view-toggle button:hover {
+  background-color: #003f66;
+}
+
+/* === Member Section Layout === */
+#members {
+  padding: 1rem;
 }
 
 #members.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  padding: 1rem;
 }
 
 #members.list {
   display: block;
-  padding: 1rem;
 }
 
-.member-card,
-.member-list {
+/* === Member Card Styles === */
+.member-card {
   background-color: #f9f9f9;
-  padding: 1rem;
   border: 1px solid #ccc;
-}
-
-.member-list img {
-  display: none;
-}
-
-.info-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin: 1rem;
-}
-
-.info-grid > div {
-  flex: 1 1 250px;
-  background-color: #eef;
+  border-radius: 6px;
   padding: 1rem;
-  border-radius: 5px;
-}
-
-.ads {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.ad-card {
-  background-color: #f4f4f4;
-  border: 1px solid #bbb;
-  padding: 1rem;
-  border-radius: 5px;
   text-align: center;
+  transition: box-shadow 0.3s;
 }
 
+.member-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.member-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.member-card a {
+  color: #005f99;
+  text-decoration: none;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+
+/* === Footer === */
 footer {
   background-color: #003366;
   color: white;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .footer-left,
@@ -141,20 +150,22 @@ footer {
   flex: 1 1 250px;
 }
 
-.footer-left p,
-.footer-right p {
-  margin: 0.3rem 0;
-}
-
 footer a {
   color: white;
   text-decoration: underline;
 }
 
+.footer-left p,
+.footer-right p {
+  margin: 0.3rem 0;
+}
+
+/* === Social Icons === */
 .social-icons {
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons img {
@@ -162,7 +173,7 @@ footer a {
   height: 24px;
 }
 
-/* Responsive layout for smaller screens */
+/* === Responsive === */
 @media screen and (max-width: 600px) {
   .footer-container {
     flex-direction: column;
@@ -176,7 +187,16 @@ footer a {
     text-align: center;
   }
 
-  .social-icons {
-    justify-content: center;
+  nav {
+    flex-direction: column;
+  }
+
+  .member-card {
+    text-align: left;
+  }
+
+  .member-card img {
+    display: block;
+    margin: 0 auto 1rem;
   }
 }
