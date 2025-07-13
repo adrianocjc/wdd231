@@ -1,20 +1,28 @@
+// Footer Information
 const yearSpan = document.getElementById("year");
 const lastModifiedSpan = document.getElementById("lastModified");
+yearSpan.textContent = new Date().getFullYear();
+lastModifiedSpan.textContent = document.lastModified;
+
+// Directory Controls
 const membersContainer = document.getElementById("members");
 const gridBtn = document.getElementById("gridView");
 const listBtn = document.getElementById("listView");
 
-// Footer Info
-yearSpan.textContent = new Date().getFullYear();
-lastModifiedSpan.textContent = document.lastModified;
-
-// Fetch member data
+// Load Members Data
 async function getMembers() {
-  const response = await fetch("data/members.json");
-  const members = await response.json();
-  displayMembers(members);
+  try {
+    const response = await fetch("data/members.json");
+    if (!response.ok) throw new Error("Failed to fetch member data.");
+    const members = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    membersContainer.textContent = "⚠️ Unable to load directory at this time.";
+    console.error(error);
+  }
 }
 
+// Display Members as Cards
 function displayMembers(members) {
   membersContainer.innerHTML = "";
   members.forEach(member => {
@@ -32,16 +40,20 @@ function displayMembers(members) {
   });
 }
 
+// View Toggle Controls
 gridBtn.addEventListener("click", () => {
   membersContainer.className = "grid";
+  membersContainer.querySelectorAll(".member-list").forEach(card => {
+    card.className = "member-card";
+  });
 });
 
 listBtn.addEventListener("click", () => {
   membersContainer.className = "list";
-  const cards = membersContainer.querySelectorAll(".member-card");
-  cards.forEach(card => {
+  membersContainer.querySelectorAll(".member-card").forEach(card => {
     card.className = "member-list";
   });
 });
 
+// Initialize on Load
 getMembers();
