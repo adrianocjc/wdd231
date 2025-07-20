@@ -13,13 +13,14 @@ img {
 header {
   background-color: #003366;
   color: white;
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;           
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  min-height: 100px
+  min-height: 120px;            
 }
+
 
 header h1 {
   font-size: 1.5rem;

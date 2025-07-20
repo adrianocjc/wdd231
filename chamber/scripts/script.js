@@ -44,19 +44,26 @@ async function loadMembers() {
   }
 }
 
+// ✅ Display Members
 function displayMembers(members) {
   membersContainer.innerHTML = "";
+
   members.forEach(member => {
     const card = document.createElement("div");
     card.className = "member-card";
 
+    const name = member.name || "Unnamed Business";
+    const image = member.image || "images/placeholder.jpg";
+    const altText = member.name ? member.name : "Business logo";
+    const level = levels[member.membership] || "Community Partner";
+
     card.innerHTML = `
-      <h3>${member.name}</h3>
-      <img src="${member.image}" alt="${member.name}" loading="lazy">
+      <h3>${name}</h3>
+      <img src="${image}" alt="${altText}" loading="lazy">
       <p>📍 ${member.address}</p>
       <p>📞 ${member.phone}</p>
-      <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
-      <p>💎 ${levels[member.membership]}</p>
+      <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+      <p>💎 ${level}</p>
     `;
 
     membersContainer.appendChild(card);
