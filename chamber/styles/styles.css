@@ -27,12 +27,17 @@ header {
 .nav-menu {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .nav-menu a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
 }
 
 .nav-menu a.active {
@@ -79,11 +84,12 @@ header {
 }
 
 .member-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 0.5rem;
+  aspect-ratio: 1 / 1;
 }
 
 footer {
@@ -119,10 +125,6 @@ footer {
 
   .nav-menu.open {
     display: flex;
-  }
-
-  .nav-menu a {
-    padding: 0.5rem 1rem;
   }
 
   .footer-container {

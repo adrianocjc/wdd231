@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Parnamirim Chamber of Commerce Directory">
-  <meta name="author" content="Adriano Costa">
-  <meta property="og:title" content="Parnamirim Chamber Directory">
-  <meta property="og:description" content="Discover local businesses and events in Parnamirim.">
-  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
-  <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/directory.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Parnamirim Chamber of Commerce Directory" />
+  <meta name="author" content="Adriano Costa" />
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Parnamirim Chamber Directory" />
+  <meta property="og:description" content="Discover local businesses and events in Parnamirim." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png" />
+  <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/directory.html" />
+
+  <!-- Security Best Practice (GitHub Pages will ignore this, but good habit) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; script-src 'self'" />
+
   <title>Directory | Parnamirim Chamber</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="images/favicon.png" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
+
 <body>
   <header>
     <h1>Parnamirim Chamber</h1>
-    <button id="menu-toggle" aria-label="Open navigation">☰</button>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
     <nav class="nav-menu">
       <a href="index.html">Home</a>
       <a href="discover.html">Discover</a>
@@ -33,7 +43,8 @@
   </header>
 
   <section class="hero">
-    <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy">
+    <h2 class="visually-hidden">Directory Hero Section</h2>
+    <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy" />
   </section>
 
   <main>
@@ -54,6 +65,7 @@
         <p>✉️ <a href="mailto:info@chamber.com">info@chamber.com</a></p>
         <p>☎️ +55 84 99993-7827</p>
       </div>
+
       <div class="footer-center">
         <div class="social-icons">
           <a href="https://www.youtube.com/@sentaquelavemquimicaprofes9055" target="_blank">
@@ -67,6 +79,7 @@
           </a>
         </div>
       </div>
+
       <div class="footer-right">
         <p>WDD 231 - Class Project</p>
         <p>Adriano Costa</p>
@@ -76,6 +89,6 @@
     </div>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>
