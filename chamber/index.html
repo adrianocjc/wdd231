@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Parnamirim's vibrant business community, attend local events, and connect with featured members through the Chamber.">
+  <meta name="author" content="Adriano Costa">
+  <meta property="og:title" content="Parnamirim Chamber Home">
+  <meta property="og:description" content="Discover local business spotlights, weather updates, and chamber events.">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/index.html">
+  <title>Home | Parnamirim Chamber</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="images/og-image.png" alt="Parnamirim Chamber Logo" class="header-logo">
+      <p>Parnamirim Chamber of Commerce</p>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="about.html">About</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero.png" alt="Welcome to Parnamirim Chamber" loading="lazy">
+    <a class="cta-button" href="join.html">Join the Chamber Today →</a>
+  </section>
+
+  <main>
+    <h1>Home | Parnamirim Chamber</h1>
+
+    <section class="events">
+      <h2>📅 Upcoming Events</h2>
+      <ul>
+        <li><strong>July 25:</strong> Small Business Workshop</li>
+        <li><strong>July 28:</strong> Community Networking Night</li>
+        <li><strong>August 3:</strong> Chamber Breakfast & Talk</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>🌦️ Weather in Parnamirim</h2>
+      <div id="current-weather">
+        <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+        <p><strong>Conditions:</strong> <span id="description"></span></p>
+      </div>
+      <div id="forecast">
+        <h3>3-Day Forecast</h3>
+        <ul id="forecast-list"></ul>
+      </div>
+    </section>
+
+    <section class="spotlights">
+      <h2>🌟 Chamber Member Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>📍Parnamirim Chamber of Commerce</strong>
+        <p>Francisco Ferreira Neves Street, #358</p>
+        <p>ZIP Code: 59.146-180</p>
+        <p>✉️ <a href="mailto:info@chamber.com">info@chamber.com</a></p>
+        <p>☎️ +55 84 99993-7827</p>
+      </div>
+      <div class="footer-center">
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@sentaquelavemquimicaprofes9055" target="_blank">
+            <img src="images/youtube.png" alt="YouTube Icon">
+          </a>
+          <a href="https://x.com/adrianosud" target="_blank">
+            <img src="images/twitter.png" alt="Twitter Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/adriano-costa-ab43b324/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn Icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>WDD 231 - Class Project</p>
+        <p>Adriano Costa</p>
+        <p>© <span id="year"></span> Parnamirim Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+</body>
+</html>
