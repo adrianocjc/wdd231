@@ -1,4 +1,4 @@
-const apiKey = "your_actual_api_key"; // ← Replace with your OpenWeatherMap API key
+const apiKey = "10eebc2e80727fc32bfa10f05a9943cb"; // ← OpenWeatherMap API key
 const city = "Parnamirim,BR";
 let usingCelsius = true;
 
@@ -17,7 +17,7 @@ function getTempColor(temp) {
   }
 }
 
-// 🌦️ Fetch and display weather data
+
 async function fetchWeather() {
   try {
     const units = usingCelsius ? "metric" : "imperial";

@@ -1,4 +1,3 @@
-/* 🌐 Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -11,7 +10,6 @@ img {
   height: auto;
 }
 
-/* 🔵 Header */
 header {
   background-color: #003366;
   color: white;
@@ -41,7 +39,6 @@ header p {
   margin: 0;
 }
 
-/* 🔘 Mobile Navigation Toggle */
 #menu-toggle {
   font-size: 1.5rem;
   background: none;
@@ -51,7 +48,6 @@ header p {
   display: none;
 }
 
-/* 🔗 Navigation Menu */
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +68,6 @@ header p {
   border-bottom: 2px solid white;
 }
 
-/* 📱 Responsive Navigation */
 @media screen and (max-width: 768px) {
   #menu-toggle {
     display: block;
@@ -91,7 +86,6 @@ header p {
   }
 }
 
-/* 🖼️ Hero Section with CTA */
 .hero {
   position: relative;
   width: 100%;
@@ -120,61 +114,113 @@ header p {
   background-color: #004d80;
 }
 
-/* 🧱 View Toggle Buttons */
-.view-toggle {
-  text-align: center;
-  margin: 1rem;
-}
-
-.view-toggle button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #005f99;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* 📘 Member Grid/List */
-#members.grid {
+.box-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem;
 }
 
-#members.list .member-card {
-  margin-bottom: 1rem;
-}
-
-/* 🆕 Member Card Styling (Spotlight Ready) */
-.member-card {
-  background: #fff;
-  border: 2px solid #ddd;
+.box-section {
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
   border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box-section h2,
+.box-section h3 {
+  background-color: #003366;
+  color: white;
+  padding: 0.75rem 1rem;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.box-section p,
+.box-section li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.box-section ul {
+  padding-left: 1rem;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.forecast-card {
+  flex: 1;
+  text-align: center;
+  background-color: #e0ecf8;
+  border-radius: 6px;
   padding: 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-3px);
+}
+
+.forecast-card h4 {
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+.day-temp {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 1rem;
+}
+
+.member-card {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s ease;
 }
 
 .member-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
+}
+
+.spotlight-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .member-card h3 {
   margin: 0.5rem 0;
+  font-size: 1.2rem;
   color: #003366;
 }
 
 .member-card p {
   margin: 0.25rem 0;
+  font-size: 0.95rem;
 }
 
 .member-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
   color: #005f99;
   font-weight: bold;
   text-decoration: none;
@@ -184,77 +230,6 @@ header p {
   text-decoration: underline;
 }
 
-.member-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-  aspect-ratio: 1 / 1;
-}
-
-/* 🌦️ Weather Styling */
-.weather {
-  background-color: #f0f8ff;
-  padding: 1.5rem;
-  margin: 2rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.weather h2,
-.weather h3 {
-  margin-bottom: 0.75rem;
-  color: #003366;
-}
-
-#forecast-list {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-#forecast-list li {
-  background-color: #e0ecf8;
-  padding: 1rem;
-  border-radius: 6px;
-  text-align: center;
-  flex: 1;
-  font-weight: bold;
-}
-
-/* 📅 Events Styling */
-.events {
-  padding: 1rem 1.5rem;
-}
-
-.events h2 {
-  color: #003366;
-  margin-bottom: 0.5rem;
-}
-
-.events ul {
-  padding-left: 1rem;
-}
-
-.events li {
-  margin-bottom: 0.5rem;
-}
-
-/* ✨ Spotlight Section */
-.spotlights {
-  margin: 2rem 1rem;
-}
-
-#spotlight-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-}
-
-/* ⚓️ Footer */
 footer {
   background-color: #003366;
   color: white;
@@ -273,25 +248,39 @@ footer {
   height: 24px;
 }
 
-/* 📱 Footer Responsive */
-@media screen and (max-width: 600px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-}
-
-/* 📱 Hero CTA + Forecast Responsive */
 @media screen and (max-width: 768px) {
-  #forecast-list {
-    flex-direction: column;
-  }
-
   .cta-button {
     bottom: 1rem;
     right: 1rem;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .nav-menu.open {
+    flex-direction: column;
+  }
+
+  .forecast-cards {
+    flex-direction: column;
+  }
+
+  .forecast-card {
+    width: 100%;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #spotlight-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 }
