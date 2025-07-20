@@ -7,9 +7,9 @@
   <meta name="author" content="Adriano Costa">
   <meta property="og:title" content="Parnamirim Chamber Home">
   <meta property="og:description" content="Discover local business spotlights, weather updates, and chamber events.">
-  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:image" content="images/og-image.png">
   <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/index.html">
-  <title>Home | Parnamirim Chamber</title>
+  <title>Home | Parnamirim Chamber of Commerce</title>
   <link rel="icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
   </section>
 
   <main>
-    <h1>Home | Parnamirim Chamber</h1>
+    <h1>Home | Parnamirim Chamber of Commerce</h1>
 
     <section class="events">
       <h2>📅 Upcoming Events</h2>
@@ -55,8 +55,10 @@
     <section class="weather">
       <h2>🌦️ Weather in Parnamirim</h2>
       <div id="current-weather">
-        <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+        <p><strong>Temperature:</strong> <span id="temp"></span>°<span id="unit">C</span></p>
         <p><strong>Conditions:</strong> <span id="description"></span></p>
+        <p><strong>Icon:</strong> <img id="weather-icon" alt="Weather Icon" src=""></p>
+        <button id="unit-toggle">Switch to °F</button>
       </div>
       <div id="forecast">
         <h3>3-Day Forecast</h3>
