@@ -1,4 +1,4 @@
-const apiKey = "10eebc2e80727fc32bfa10f05a9943cb"; // ← OpenWeatherMap API key
+const apiKey = "10eebc2e80727fc32bfa10f05a9943cb"; // OpenWeatherMap API key
 const city = "Parnamirim,BR";
 let usingCelsius = true;
 
@@ -17,7 +17,6 @@ function getTempColor(temp) {
   }
 }
 
-
 async function fetchWeather() {
   try {
     const units = usingCelsius ? "metric" : "imperial";
@@ -33,49 +32,69 @@ async function fetchWeather() {
     const forecastData = await forecastRes.json();
 
     // 🌡️ Current Conditions
-    document.getElementById("temp").textContent = Math.round(currentData.main.temp);
-    document.getElementById("unit").textContent = usingCelsius ? "C" : "F";
-    document.getElementById("description").textContent = currentData.weather[0].description;
-    document.getElementById("high").textContent = Math.round(currentData.main.temp_max);
-    document.getElementById("low").textContent = Math.round(currentData.main.temp_min);
-    document.getElementById("humidity").textContent = currentData.main.humidity;
+    const tempEl = document.getElementById("temp");
+    const unitEl = document.getElementById("unit");
+    const descEl = document.getElementById("description");
+    const highEl = document.getElementById("high");
+    const lowEl = document.getElementById("low");
+    const humidityEl = document.getElementById("humidity");
+    const sunriseEl = document.getElementById("sunrise");
+    const sunsetEl = document.getElementById("sunset");
+
+    if (tempEl) tempEl.textContent = Math.round(currentData.main.temp);
+    if (unitEl) unitEl.textContent = usingCelsius ? "C" : "F";
+    if (descEl) descEl.textContent = currentData.weather[0].description;
+    if (highEl) highEl.textContent = Math.round(currentData.main.temp_max);
+    if (lowEl) lowEl.textContent = Math.round(currentData.main.temp_min);
+    if (humidityEl) humidityEl.textContent = currentData.main.humidity;
 
     const sunrise = new Date(currentData.sys.sunrise * 1000);
     const sunset = new Date(currentData.sys.sunset * 1000);
     const timeFormat = { hour: "2-digit", minute: "2-digit" };
 
-    document.getElementById("sunrise").textContent = sunrise.toLocaleTimeString("en-BR", timeFormat);
-    document.getElementById("sunset").textContent = sunset.toLocaleTimeString("en-BR", timeFormat);
+    if (sunriseEl) sunriseEl.textContent = sunrise.toLocaleTimeString("en-BR", timeFormat);
+    if (sunsetEl) sunsetEl.textContent = sunset.toLocaleTimeString("en-BR", timeFormat);
 
     // 📆 3-Day Forecast at noon
     const forecastList = forecastData.list.filter(item => item.dt_txt.includes("12:00:00"));
+    if (forecastList.length >= 3) {
+      const todayTemp = Math.round(forecastList[0].main.temp);
+      const wedTemp = Math.round(forecastList[1].main.temp);
+      const thuTemp = Math.round(forecastList[2].main.temp);
 
-    const todayTemp = Math.round(forecastList[0].main.temp);
-    const wedTemp = Math.round(forecastList[1].main.temp);
-    const thuTemp = Math.round(forecastList[2].main.temp);
+      const todayEl = document.getElementById("forecast-today");
+      const wedEl = document.getElementById("forecast-wed");
+      const thuEl = document.getElementById("forecast-thu");
 
-    const todayEl = document.getElementById("forecast-today");
-    const wedEl = document.getElementById("forecast-wed");
-    const thuEl = document.getElementById("forecast-thu");
+      if (todayEl) {
+        todayEl.textContent = `${todayTemp}°`;
+        todayEl.style.color = getTempColor(todayTemp);
+      }
 
-    todayEl.textContent = `${todayTemp}°`;
-    wedEl.textContent = `${wedTemp}°`;
-    thuEl.textContent = `${thuTemp}°`;
+      if (wedEl) {
+        wedEl.textContent = `${wedTemp}°`;
+        wedEl.style.color = getTempColor(wedTemp);
+      }
 
-    todayEl.style.color = getTempColor(todayTemp);
-    wedEl.style.color = getTempColor(wedTemp);
-    thuEl.style.color = getTempColor(thuTemp);
+      if (thuEl) {
+        thuEl.textContent = `${thuTemp}°`;
+        thuEl.style.color = getTempColor(thuTemp);
+      }
+    }
   } catch (error) {
     console.error("Weather API error:", error);
   }
 }
 
 // 🔁 °C/°F toggle button
-document.getElementById("unit-toggle").addEventListener("click", () => {
-  usingCelsius = !usingCelsius;
-  document.getElementById("unit-toggle").textContent = usingCelsius ? "Switch to °F" : "Switch to °C";
-  fetchWeather();
-});
+const toggleBtn = document.getElementById("unit-toggle");
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    usingCelsius = !usingCelsius;
+    toggleBtn.textContent = usingCelsius ? "Switch to °F" : "Switch to °C";
+    fetchWeather();
+  });
+}
 
 // ⏱️ Initial load
 fetchWeather();
