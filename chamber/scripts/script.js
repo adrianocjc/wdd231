@@ -1,8 +1,8 @@
-// Footer Information
+// ✅ Footer Information
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Navigation Toggle for Mobile
+// ✅ Mobile Navigation Toggle
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -10,7 +10,7 @@ menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("open");
 });
 
-// View Toggle Buttons
+// ✅ View Toggle Buttons (Grid & List)
 const gridBtn = document.getElementById("gridView");
 const listBtn = document.getElementById("listView");
 const membersContainer = document.getElementById("members");
@@ -25,26 +25,25 @@ listBtn.addEventListener("click", () => {
   membersContainer.classList.remove("grid");
 });
 
-// Membership Labels
+// ✅ Membership Level Labels
 const levels = {
   1: "Member",
   2: "Silver Member",
   3: "Gold Member"
 };
 
-// Load Member Data
+// ✅ Fetch and Render Chamber Members
 async function loadMembers() {
   try {
-    const res = await fetch("data/members.json");
-    const members = await res.json();
+    const response = await fetch("data/members.json");
+    const members = await response.json();
     displayMembers(members);
-  } catch (err) {
+  } catch (error) {
     membersContainer.innerHTML = "<p>⚠️ Unable to load member data.</p>";
-    console.error("Fetch error:", err);
+    console.error("Fetch error:", error);
   }
 }
 
-// Display Member Cards
 function displayMembers(members) {
   membersContainer.innerHTML = "";
   members.forEach(member => {
@@ -53,7 +52,7 @@ function displayMembers(members) {
 
     card.innerHTML = `
       <h3>${member.name}</h3>
-      <img src="${member.image}" alt="${member.name}" loading="lazy" />
+      <img src="${member.image}" alt="${member.name}" loading="lazy">
       <p>📍 ${member.address}</p>
       <p>📞 ${member.phone}</p>
       <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
@@ -64,5 +63,5 @@ function displayMembers(members) {
   });
 }
 
-// Initialize
+// ✅ Load members on page load
 loadMembers();
