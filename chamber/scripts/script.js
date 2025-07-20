@@ -6,12 +6,28 @@ document.getElementById("lastModified").textContent = document.lastModified;
 const gridBtn = document.getElementById("gridView");
 const listBtn = document.getElementById("listView");
 const membersContainer = document.getElementById("members");
+const toggleBtn = document.getElementById("menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+toggleBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+gridBtn.addEventListener("click", () => {
+  membersContainer.classList.add("grid");
+  membersContainer.classList.remove("list");
+});
+
+listBtn.addEventListener("click", () => {
+  membersContainer.classList.add("list");
+  membersContainer.classList.remove("grid");
+});
 
 // Membership Labels
 const levels = {
   1: "Member",
-  2: "Silver",
-  3: "Gold"
+  2: "Silver Member",
+  3: "Gold Member"
 };
 
 // Load Data
@@ -20,9 +36,9 @@ async function loadMembers() {
     const res = await fetch("data/members.json");
     const members = await res.json();
     displayMembers(members);
-  } catch (error) {
-    membersContainer.textContent = "⚠️ Unable to load directory.";
-    console.error(error);
+  } catch (err) {
+    membersContainer.innerHTML = "<p>⚠️ Unable to load members.</p>";
+    console.error(err);
   }
 }
 

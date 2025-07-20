@@ -1,53 +1,42 @@
-/* === Reset and Base === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #fff;
+  background: #fff;
   color: #333;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* === Header === */
 header {
+  background: #003366;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-nav {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
 }
 
-nav a {
-  margin-left: 1rem;
-  font-weight: bold;
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
   color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu a {
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
 }
 
-nav a.active {
+.nav-menu a.active {
   border-bottom: 2px solid white;
-}
-
-/* === Hero === */
-.hero {
-  position: relative;
-  text-align: center;
 }
 
 .hero img {
@@ -55,22 +44,6 @@ nav a.active {
   display: block;
 }
 
-.cta-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #005f99;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-/* === View Toggle Buttons === */
 .view-toggle {
   text-align: center;
   margin: 1rem;
@@ -79,44 +52,30 @@ nav a.active {
 .view-toggle button {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #005f99;
+  background: #005f99;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.view-toggle button:hover {
-  background-color: #003f66;
-}
-
-/* === Member Section Layout === */
-#members {
-  padding: 1rem;
-}
-
 #members.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  padding: 1rem;
 }
 
-#members.list {
-  display: block;
+#members.list .member-card {
+  margin-bottom: 1rem;
 }
 
-/* === Member Card Styles === */
 .member-card {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 1rem;
   text-align: center;
-  transition: box-shadow 0.3s;
-}
-
-.member-card:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .member-card img {
@@ -127,18 +86,8 @@ nav a.active {
   margin-bottom: 0.5rem;
 }
 
-.member-card a {
-  color: #005f99;
-  text-decoration: none;
-}
-
-.member-card a:hover {
-  text-decoration: underline;
-}
-
-/* === Footer === */
 footer {
-  background-color: #003366;
+  background: #003366;
   color: white;
   padding: 2rem 1rem;
 }
@@ -150,59 +99,35 @@ footer {
   justify-content: space-between;
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
-  flex: 1 1 250px;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-.footer-left p,
-.footer-right p {
-  margin: 0.3rem 0;
-}
-
-/* === Social Icons === */
-.social-icons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
 .social-icons img {
   width: 24px;
   height: 24px;
 }
 
-/* === Responsive === */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 1rem;
+  }
+
   .footer-container {
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    text-align: center;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-
-  .member-card {
-    text-align: left;
-  }
-
-  .member-card img {
-    display: block;
-    margin: 0 auto 1rem;
   }
 }

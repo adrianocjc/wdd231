@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Parnamirim Chamber of Commerce Directory">
   <meta name="author" content="Adriano Costa">
-  <!-- Open Graph Metadata -->
   <meta property="og:title" content="Parnamirim Chamber Directory">
   <meta property="og:description" content="Discover local businesses and events in Parnamirim.">
   <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
   <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/directory.html">
-  <title>Directory | Parnamirim Chamber of Commerce</title>
+  <title>Directory | Parnamirim Chamber</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -20,8 +19,9 @@
 </head>
 <body>
   <header>
-    <h3>Parnamirim Chamber of Commerce</h3>
-    <nav>
+    <h1>Parnamirim Chamber</h1>
+    <button id="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-menu">
       <a href="index.html">Home</a>
       <a href="discover.html">Discover</a>
       <a href="directory.html" class="active">Directory</a>
@@ -31,46 +31,51 @@
       <a href="events.html">Events</a>
     </nav>
   </header>
+
   <section class="hero">
-    <h2 class="visually-hidden">Directory</h2>
-    <img src="images/hero.png" alt="Parnamirim Chamber Event">
-    <button class="cta-button">🎟️ Keynote Tickets</button>
+    <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy">
   </section>
+
   <main>
-    <h1>Parnamirim Chamber of Commerce</h1>
+    <h2>Our Members</h2>
     <div class="view-toggle">
       <button id="gridView">Grid View</button>
       <button id="listView">List View</button>
     </div>
-    <section id="members" class="grid"></section>    
+    <section id="members" class="grid"></section>
   </main>
+
   <footer>
     <div class="footer-container">
       <div class="footer-left">
         <strong>📍Parnamirim Chamber of Commerce</strong>
         <p>Francisco Ferreira Neves Street, #358</p>
         <p>ZIP Code: 59.146-180</p>
-        <p>🖂 <a href="mailto:info@chamber.com">info@chamber.com</a></p>
+        <p>✉️ <a href="mailto:info@chamber.com">info@chamber.com</a></p>
         <p>☎️ +55 84 99993-7827</p>
       </div>
       <div class="footer-center">
         <div class="social-icons">
           <a href="https://www.youtube.com/@sentaquelavemquimicaprofes9055" target="_blank">
-          <img src="images/youtube.png" alt="YouTube Page"></a>
+            <img src="images/youtube.png" alt="YouTube">
+          </a>
           <a href="https://x.com/adrianosud" target="_blank">
-          <img src="images/twitter.png" alt="Twitter Page"></a>
+            <img src="images/twitter.png" alt="Twitter">
+          </a>
           <a href="https://www.linkedin.com/in/adriano-costa-ab43b324/" target="_blank">
-          <img src="images/linkedin.png" alt="LinkedIn Profile"></a>
+            <img src="images/linkedin.png" alt="LinkedIn">
+          </a>
         </div>
       </div>
       <div class="footer-right">
         <p>WDD 231 - Class Project</p>
         <p>Adriano Costa</p>
-        <p>© <span id="year"></span> Parnamirim Chamber of Commerce.</p>
+        <p>© <span id="year"></span> Parnamirim Chamber</p>
         <p>Last Modified: <span id="lastModified"></span></p>
       </div>
     </div>
   </footer>
+
   <script src="scripts/script.js"></script>
 </body>
 </html>
