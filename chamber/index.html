@@ -7,7 +7,7 @@
   <meta name="author" content="Adriano Costa">
   <meta property="og:title" content="Parnamirim Chamber Home">
   <meta property="og:description" content="Discover local business spotlights, weather updates, and chamber events.">
-  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
   <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/index.html">
   <title>Home | Parnamirim Chamber of Commerce</title>
   <link rel="icon" href="images/favicon.png">
@@ -43,26 +43,42 @@
   <main>
     <h1>Home | Parnamirim Chamber of Commerce</h1>
 
-    <section class="events">
-      <h2>📅 Upcoming Events</h2>
+    <section class="box-section events">
+      <h2>📅 Events</h2>
       <ul>
         <li><strong>July 25:</strong> Small Business Workshop</li>
-        <li><strong>July 28:</strong> Community Networking Night</li>
-        <li><strong>August 3:</strong> Chamber Breakfast & Talk</li>
+        <li><strong>July 28:</strong> Networking Night</li>
+        <li><strong>Aug 3:</strong> Chamber Breakfast</li>
       </ul>
     </section>
 
-    <section class="weather">
-      <h2>🌦️ Weather in Parnamirim</h2>
-      <div id="current-weather">
-        <p><strong>Temperature:</strong> <span id="temp"></span>°<span id="unit">C</span></p>
-        <p><strong>Conditions:</strong> <span id="description"></span></p>
-        <p><strong>Icon:</strong> <img id="weather-icon" alt="Weather Icon" src=""></p>
-        <button id="unit-toggle">Switch to °F</button>
-      </div>
-      <div id="forecast">
-        <h3>3-Day Forecast</h3>
-        <ul id="forecast-list"></ul>
+    <section class="box-section weather">
+      <h2>🌤️ Current Weather</h2>
+      <p><strong>Temperature:</strong> <span id="temp">--</span>°<span id="unit">C</span></p>
+      <p><strong>Conditions:</strong> <span id="description">--</span></p>
+      <p><strong>High:</strong> <span id="high">--</span>°</p>
+      <p><strong>Low:</strong> <span id="low">--</span>°</p>
+      <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+      <p><strong>Sunrise:</strong> <span id="sunrise">--</span></p>
+      <p><strong>Sunset:</strong> <span id="sunset">--</span></p>
+      <button id="unit-toggle">Switch to °F</button>
+    </section>
+
+    <section class="box-section forecast">
+      <h2>📈 Weather Forecast</h2>
+      <div class="forecast-cards">
+        <div class="forecast-card">
+          <h4>Today</h4>
+          <p class="day-temp" id="forecast-today">--°</p>
+        </div>
+        <div class="forecast-card">
+          <h4>Wednesday</h4>
+          <p class="day-temp" id="forecast-wed">--°</p>
+        </div>
+        <div class="forecast-card">
+          <h4>Thursday</h4>
+          <p class="day-temp" id="forecast-thu">--°</p>
+        </div>
       </div>
     </section>
 
