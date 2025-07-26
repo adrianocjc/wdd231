@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Parnamirim Chamber</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="images/favicon.png" />
+  <style>
+    .thankyou-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .thankyou-section h1 {
+      font-size: 2.2em;
+      color: #218838;
+      margin-bottom: 0.5rem;
+    }
+
+    .thankyou-section p {
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+    }
+
+    .form-summary {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 6px;
+      border: 1px solid #dee2e6;
+    }
+
+    .form-summary h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.5em;
+      color: #343a40;
+    }
+
+    .form-summary ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .form-summary li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 1.05em;
+    }
+
+    .form-summary li span {
+      font-weight: bold;
+      color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .thankyou-section {
+        padding: 1rem;
+      }
+
+      .form-summary li {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="images/og-image.png" alt="Chamber Logo" class="header-logo" />
+      <p>Parnamirim Chamber of Commerce</p>
+    </div>
+    <button id="menu-toggle">☰</button>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="thankyou-section centered">
+      <h1>🎉 Thank You, <span id="first-name-display"></span>!</h1>
+      <p>Your membership application has been received successfully. We’re excited to have your organization as part of our chamber community.</p>
+      <p>Here’s a summary of what you submitted:</p>
+
+      <div class="form-summary">
+        <h2>📝 Submission Details</h2>
+        <ul>
+          <li>First Name: <span id="confirm-first"></span></li>
+          <li>Last Name: <span id="confirm-last"></span></li>
+          <li>Email Address: <span id="confirm-email"></span></li>
+          <li>Mobile Number: <span id="confirm-phone"></span></li>
+          <li>Business Name: <span id="confirm-organization"></span></li>
+          <li>Submitted At: <span id="confirm-timestamp"></span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div><strong>📍 Parnamirim Chamber</strong><br/>Francisco Ferreira Neves Street, #358</div>
+      <div>© <span id="year"></span> Adriano Costa • WDD 231</div>
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("confirm-first").textContent = params.get("first") || "—";
+    document.getElementById("confirm-last").textContent = params.get("last") || "—";
+    document.getElementById("confirm-email").textContent = params.get("email") || "—";
+    document.getElementById("confirm-phone").textContent = params.get("phone") || "—";
+    document.getElementById("confirm-organization").textContent = params.get("organization") || "—";
+    document.getElementById("confirm-timestamp").textContent = params.get("timestamp") ? new Date(params.get("timestamp")).toLocaleString() : "—";
+    document.getElementById("first-name-display").textContent = params.get("first") || "Friend";
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

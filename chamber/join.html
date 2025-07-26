@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parnamirim Chamber of Commerce Join Page">
+  <meta name="author" content="Adriano Costa">
+  <meta property="og:title" content="Parnamirim Chamber Join Page">
+  <meta property="og:description" content="Discover trusted businesses in Parnamirim, explore local connections, and stay informed about chamber events and opportunities.">
+  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/join.html">
+  <title>Join | Parnamirim Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="images/og-image.png" alt="Parnamirim Chamber Logo" class="header-logo">
+      <p>Parnamirim Chamber of Commerce</p>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+      <a href="about.html">About</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 class="hero-title">Join Page</h2>
+    <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy">
+  </section>
+
+  <main>
+    <h1 class="centered">Become a Member</h1>
+    <div class="join-wrapper">
+      <form method="get" action="thankyou.html">
+        <label>First Name:
+          <input type="text" name="first" required title="First name" autocomplete="given-name" />
+        </label>
+
+        <label>Last Name:
+          <input type="text" name="last" required title="Last name" autocomplete="family-name" />
+        </label>
+
+        <label>Title:
+          <input type="text" name="title" title="Organizational title" autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}" />
+        </label>
+
+        <label>Email:
+          <input type="email" name="email" required title="Email address" autocomplete="email"
+            placeholder="your@email.com" />
+        </label>
+
+        <label>Mobile Phone:
+          <input type="tel" name="phone" required title="Mobile phone number" autocomplete="tel" />
+        </label>
+
+        <label>Organization Name:
+          <input type="text" name="organization" required title="Organization name" autocomplete="organization" />
+        </label>
+
+        <label for="membership">Membership Level:
+          <select name="membership" id="membership" required title="Membership level">
+            <option value="">Select a level</option>
+            <option value="np">NP Membership (Free)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label>Description:
+          <textarea name="description" title="Business description"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp" />
+
+        <input type="submit" value="Apply Now" />
+      </form>
+
+      <section class="membership-cards">
+        <div class="card" id="card-np">
+          <h3>NP Membership</h3>
+          <p>Perfect for nonprofit organizations</p>
+          <button onclick="showModal('modal-np')">More Info</button>
+        </div>
+        <div class="card" id="card-bronze">
+          <h3>Bronze Membership</h3>
+          <p>Get basic chamber benefits</p>
+          <button onclick="showModal('modal-bronze')">More Info</button>
+        </div>
+        <div class="card" id="card-silver">
+          <h3>Silver Membership</h3>
+          <p>Includes spotlight positions & training</p>
+          <button onclick="showModal('modal-silver')">More Info</button>
+        </div>
+        <div class="card" id="card-gold">
+          <h3>Gold Membership</h3>
+          <p>Premium perks & advertising</p>
+          <button onclick="showModal('modal-gold')">More Info</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <div id="modal-np" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('modal-np')">&times;</span>
+      <h2>NP Membership</h2>
+      <p>No cost. Access to general events and networking.</p>
+    </div>
+  </div>
+
+  <div id="modal-bronze" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('modal-bronze')">&times;</span>
+      <h2>Bronze Membership</h2>
+      <p>Includes basic advertising, directory listing, and workshop invites.</p>
+    </div>
+  </div>
+
+  <div id="modal-silver" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('modal-silver')">&times;</span>
+      <h2>Silver Membership</h2>
+      <p>Features spotlight placement, event discounts, and sponsorship offers.</p>
+    </div>
+  </div>
+
+  <div id="modal-gold" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('modal-gold')">&times;</span>
+      <h2>Gold Membership</h2>
+      <p>Premium visibility, speaking opportunities, custom advertising packages.</p>
+    </div>
+  </div>
+
+   <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>📍 Parnamirim Chamber of Commerce</strong>
+        <p>Francisco Ferreira Neves Street, #358</p>
+        <p>Parnamirim - RN | ZIP Code: 59.146-180</p>
+        <p>📧 <a href="mailto:adrianocjc@gmail.com">adrianocjc@gmail.com</a></p>
+        <p>☎️ +55 84 99993-7827</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="social-icons">
+          <a href="#"><img src="images/youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p>WDD 231 - Class Project</p>
+        <p>Adriano Costa</p>
+        <p>© <span id="year"></span> All rights reserved.</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/join.js"></script>
+</body>
+</html>
