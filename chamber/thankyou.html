@@ -1,87 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Parnamirim Chamber</title>
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="icon" href="images/favicon.png" />
-  <style>
-    .thankyou-section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: #f8f9fa;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .thankyou-section h1 {
-      font-size: 2.2em;
-      color: #218838;
-      margin-bottom: 0.5rem;
-    }
-
-    .thankyou-section p {
-      font-size: 1.1em;
-      margin-bottom: 1rem;
-    }
-
-    .form-summary {
-      background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 6px;
-      border: 1px solid #dee2e6;
-    }
-
-    .form-summary h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      font-size: 1.5em;
-      color: #343a40;
-    }
-
-    .form-summary ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .form-summary li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #e9ecef;
-      font-size: 1.05em;
-    }
-
-    .form-summary li span {
-      font-weight: bold;
-      color: #0056b3;
-    }
-
-    @media (max-width: 600px) {
-      .thankyou-section {
-        padding: 1rem;
-      }
-
-      .form-summary li {
-        font-size: 1em;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parnamirim Chamber of Commerce Thank You Page">
+  <meta name="author" content="Adriano Costa">
+  <meta property="og:title" content="Parnamirim Chamber Thank You Page">
+  <meta property="og:description" content="Discover trusted businesses in Parnamirim, explore local connections, and stay informed about chamber events and opportunities.">
+  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/thankyou.html">
+  <title>Thank You | Parnamirim Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header>
     <div class="header-left">
-      <img src="images/og-image.png" alt="Chamber Logo" class="header-logo" />
+      <img src="images/og-image.png" alt="Parnamirim Chamber Logo" class="header-logo">
       <p>Parnamirim Chamber of Commerce</p>
     </div>
-    <button id="menu-toggle">☰</button>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
     <nav class="nav-menu">
       <a href="index.html">Home</a>
       <a href="discover.html">Discover</a>
       <a href="directory.html">Directory</a>
       <a href="join.html">Join</a>
       <a href="about.html">About</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="events.html">Events</a>
     </nav>
   </header>
 
@@ -107,21 +57,32 @@
 
   <footer>
     <div class="footer-container">
-      <div><strong>📍 Parnamirim Chamber</strong><br/>Francisco Ferreira Neves Street, #358</div>
-      <div>© <span id="year"></span> Adriano Costa • WDD 231</div>
+      <div class="footer-left">
+        <strong>📍 Parnamirim Chamber of Commerce</strong>
+        <p>Francisco Ferreira Neves Street, #358</p>
+        <p>Parnamirim - RN | ZIP Code: 59.146-180</p>
+        <p>📧 <a href="mailto:adrianocjc@gmail.com">adrianocjc@gmail.com</a></p>
+        <p>☎️ +55 84 99993-7827</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="social-icons">
+          <a href="#"><img src="images/youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p>WDD 231 - Class Project</p>
+        <p>Adriano Costa</p>
+        <p>© <span id="year"></span> All rights reserved.</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    document.getElementById("confirm-first").textContent = params.get("first") || "—";
-    document.getElementById("confirm-last").textContent = params.get("last") || "—";
-    document.getElementById("confirm-email").textContent = params.get("email") || "—";
-    document.getElementById("confirm-phone").textContent = params.get("phone") || "—";
-    document.getElementById("confirm-organization").textContent = params.get("organization") || "—";
-    document.getElementById("confirm-timestamp").textContent = params.get("timestamp") ? new Date(params.get("timestamp")).toLocaleString() : "—";
-    document.getElementById("first-name-display").textContent = params.get("first") || "Friend";
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/thankyou.js"></script>
 </body>
 </html>
