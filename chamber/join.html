@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
+  
 </head>
 <body>
   <header>
@@ -24,7 +25,7 @@
       <p>Parnamirim Chamber of Commerce</p>
     </div>
     <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <nav class="nav-menu">
+    <nav class="nav-menu" id="nav-menu">
       <a href="index.html">Home</a>
       <a href="discover.html">Discover</a>
       <a href="directory.html">Directory</a>
@@ -36,57 +37,13 @@
   </header>
 
   <section class="hero">
-    <h2 class="hero-title">Join Page</h2>
+    <h2 class="hero-title">Join Us</h2>
     <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy">
   </section>
 
   <main>
     <h1 class="centered">Become a Member</h1>
-    <div class="join-wrapper">
-      <form method="get" action="thankyou.html">
-        <label for="first">First Name:
-          <input type="text" id="first" name="first" required autocomplete="given-name" />
-        </label>
-
-        <label for="last">Last Name:
-          <input type="text" id="last" name="last" required autocomplete="family-name" />
-        </label>
-
-        <label for="title">Title:
-          <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
-        </label>
-
-        <label for="email">Email:
-          <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com" />
-        </label>
-
-        <label for="phone">Mobile Phone:
-          <input type="tel" id="phone" name="phone" required autocomplete="tel" />
-        </label>
-
-        <label for="organization">Organization Name:
-          <input type="text" id="organization" name="organization" required autocomplete="organization" />
-        </label>
-
-        <label for="membership">Membership Level:
-          <select id="membership" name="membership" required>
-            <option value="">Select a level</option>
-            <option value="np">NP Membership (Free)</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
-
-        <label for="description">Description:
-          <textarea id="description" name="description" placeholder="Brief description of your business..."></textarea>
-        </label>
-
-        <input type="hidden" name="timestamp" id="timestamp" />
-        <input type="submit" value="Apply Now" />
-      </form>
-
-      <section class="membership-cards">
+    <section class="membership-cards">
         <div class="card" id="card-np">
           <h3>NP Membership</h3>
           <p>Perfect for nonprofit organizations</p>
@@ -109,8 +66,52 @@
         </div>
       </section>
     </div>
-  </main>
+    <div class="join-wrapper">
+      <form method="get" action="thankyou.html">
+        <div class="input-row">
+          <label for="first">First Name:
+            <input type="text" id="first" name="first" required autocomplete="given-name" />
+          </label>
 
+          <label for="last">Last Name:
+            <input type="text" id="last" name="last" required autocomplete="family-name" />
+          </label>
+        </div>
+        <div class="input-row">
+          <label for="title">Title:
+            <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="Minimum 07 characters" pattern="[A-Za-z\s\-]{7,}" />
+          </label>
+
+          <label for="phone">Mobile Phone:
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+          </label>
+        </div>
+        <label for="email">Email:
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com" />
+        </label>
+
+        <label for="organization">Organization Name:
+          <input type="text" id="organization" name="organization" required autocomplete="organization" />
+        </label>
+
+        <label for="membership">Membership Level:
+          <select id="membership" name="membership" required>
+            <option value="">Select a level</option>
+            <option value="np">NP Membership (Free)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label for="description">Description:
+          <textarea id="description" name="description" placeholder="Brief description of your business..."></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp" />
+        <input type="submit" value="Apply Now" />
+      </form>      
+  </main>
   <!-- Modals -->
   <div id="modal-np" class="modal" role="dialog" aria-labelledby="modal-np-title" aria-hidden="true">
     <div class="modal-content">
@@ -156,9 +157,15 @@
 
       <div class="footer-center">
         <div class="social-icons">
-          <a href="#"><img src="images/youtube.png" alt="YouTube" /></a>
-          <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
-          <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@sentaquelavemquimicaprofes9055" target="_blank">
+            <img src="images/youtube.png" alt="YouTube Icon">
+          </a>
+          <a href="https://x.com/adrianosud" target="_blank">
+            <img src="images/twitter.png" alt="Twitter Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/adriano-costa-ab43b324/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn Icon">
+          </a>
         </div>
       </div>
 
