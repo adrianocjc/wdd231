@@ -618,6 +618,17 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.chamber-name {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.chamber-name:hover {
+  text-decoration: underline;
+  color: #2a9df4;
+}
+
 @media (max-width: 480px) {
   .modal-content {
     padding: 24px;
