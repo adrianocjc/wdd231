@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Parnamirim Chamber of Commerce">
+  <meta name="author" content="Adriano Costa">
+  <meta property="og:title" content="Contact Parnamirim Chamber">
+  <meta property="og:description" content="Reach out with questions, feedback, and opportunities to connect with local businesses.">
+  <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/contact.html">
+  <title>Contact | Parnamirim Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="images/og-image.png" alt="Parnamirim Chamber Logo" class="header-logo">
+      <p>Parnamirim Chamber of Commerce</p>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html">Directory</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="about.html">About</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="events.html">Events</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 class="hero-title">Contact Us</h2>
+    <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy">
+  </section>
+
+  <main>
+    <h1 class="centered">We’d Love to Hear from You</h1>
+    <section class="contact-intro">
+      <p class="centered">Fill out the form below and we'll get back to you as soon as possible.</p>
+    </section>
+
+    <div class="join-wrapper">
+      <form id="contact-form">
+        <div class="input-row">
+          <label for="first">First Name:
+            <input type="text" id="first" name="first" required autocomplete="given-name">
+          </label>
+          <label for="last">Last Name:
+            <input type="text" id="last" name="last" required autocomplete="family-name">
+          </label>
+        </div>
+        <label for="email">Email:
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
+        </label>
+        <label for="subject">Subject:
+          <input type="text" id="subject" name="subject" required placeholder="How can we help you?">
+        </label>
+        <label for="message">Message:
+          <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+        </label>
+        <input type="submit" value="Send Message">
+      </form>
+
+      <p id="confirmation-message" style="display:none;" class="centered">
+        ✅ Your message has been received. We’ll be in touch soon!
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>📍 Parnamirim Chamber of Commerce</strong>
+        <p>Francisco Ferreira Neves Street, #358</p>
+        <p>Parnamirim - RN | ZIP Code: 59.146-180</p>
+        <p>📧 <a href="mailto:adrianocjc@gmail.com">Contact Us</a></p>
+        <p>☎️ +55 84 99993-7827</p>
+      </div>
+      <div class="footer-center">
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@sentaquelavemquimicaprofes9055" target="_blank">
+            <img src="images/youtube.png" alt="YouTube Icon">
+          </a>
+          <a href="https://x.com/adrianosud" target="_blank">
+            <img src="images/twitter.png" alt="Twitter Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/adriano-costa-ab43b324/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn Icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>WDD 231 - Class Project</p>
+        <p>Adriano Costa</p>
+        <p>© <span id="year"></span> All rights reserved.</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu toggle
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    });
+
+    // Inline form confirmation
+    const form = document.getElementById('contact-form');
+    const confirmation = document.getElementById('confirmation-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.style.display = 'none';
+      confirmation.style.display = 'block';
+    });
+
+    // Footer year & last modified
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
