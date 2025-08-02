@@ -1,0 +1,67 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #FFFFFF;
+  color: #3CB6A0;
+  margin: 0;
+  padding: 0 1rem;
+}
+header {
+  background: #3CB6A0;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.subtitle {
+  color: #F7B6B2;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+h2 {
+  color: #3CB6A0;
+  border-bottom: 2px solid #F7B6B2;
+  padding-bottom: 0.2em;
+  margin-top: 2em;
+  font-size: 1.5rem;
+}
+.accent {
+  color: #F7B6B2;
+  font-weight: bold;
+}
+ul {
+  color: #333;
+  font-size: 1.1rem;
+}
+.wireframes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.wireframe {
+  border: 2px solid #3CB6A0;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  background: #F7B6B2;
+}
+.wireframe-title {
+  color: #3CB6A0;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.wireframe-sketch {
+  font-family: monospace;
+  font-size: 0.95em;
+  color: #333;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px dashed #3CB6A0;
+  white-space: pre;
+}
