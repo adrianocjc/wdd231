@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Marycookins</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Marycookins</h1>
+                    <p>Cookies & Macarons</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="project.html" class="nav-link">Home</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="order.html" class="nav-link active">Order</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Place Your Order</h1>
+                <p>Create your perfect custom cookies and macarons</p>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <div class="container">
+                <div class="order-grid">
+                    <div class="order-form-container">
+                        <form id="orderForm" class="order-form">
+                            <h2>Order Details</h2>
+                            
+                            <div class="form-group">
+                                <label for="customerName">Full Name *</label>
+                                <input type="text" id="customerName" name="customerName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="productType">Product Type *</label>
+                                <select id="productType" name="productType" required>
+                                    <option value="">Select Product Type</option>
+                                    <option value="cookies">Custom Cookies</option>
+                                    <option value="macarons">Macarons</option>
+                                    <option value="both">Both Cookies & Macarons</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantity">Quantity *</label>
+                                <input type="number" id="quantity" name="quantity" min="12" max="500" required>
+                                <small>Minimum order: 12 pieces</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occasion">Occasion</label>
+                                <select id="occasion" name="occasion">
+                                    <option value="">Select Occasion</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="holiday">Holiday</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="deliveryDate">Preferred Delivery Date *</label>
+                                <input type="date" id="deliveryDate" name="deliveryDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="specialRequests">Special Requests / Design Details</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Please describe your design preferences, colors, themes, or any special requirements..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                                    I agree to the terms and conditions *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Order Request</button>
+                        </form>
+                    </div>
+
+                    <div class="order-info">
+                        <div class="pricing-card">
+                            <h3>Pricing Guide</h3>
+                            <div class="price-item">
+                                <span>Custom Cookies</span>
+                                <span>$3.50 - $8.00 each</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Macarons</span>
+                                <span>$2.50 - $4.00 each</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Wedding Sets</span>
+                                <span>Custom Quote</span>
+                            </div>
+                            <p class="pricing-note">*Prices vary based on complexity and design</p>
+                        </div>
+
+                        <div class="order-info-card">
+                            <h3>Order Information</h3>
+                            <ul>
+                                <li>Minimum order: 12 pieces</li>
+                                <li>Lead time: 5-7 business days</li>
+                                <li>Rush orders available (additional fee)</li>
+                                <li>Free consultation for orders over $100</li>
+                                <li>Delivery available within 25 miles</li>
+                            </ul>
+                        </div>
+
+                        <div class="estimate-calculator">
+                            <h3>Quick Estimate</h3>
+                            <div class="calculator">
+                                <input type="number" id="calcQuantity" placeholder="Quantity" min="12">
+                                <select id="calcType">
+                                    <option value="3.5">Basic Cookies ($3.50)</option>
+                                    <option value="5.5">Premium Cookies ($5.50)</option>
+                                    <option value="8">Luxury Cookies ($8.00)</option>
+                                    <option value="2.5">Basic Macarons ($2.50)</option>
+                                    <option value="4">Premium Macarons ($4.00)</option>
+                                </select>
+                                <button type="button" id="calculateBtn">Calculate</button>
+                                <div id="estimateResult" class="estimate-result"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Marycookins</h3>
+                    <p>Creating edible art that brings joy to every celebration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Marycookins. All rights reserved. | <a href="references.html">References</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
