@@ -279,6 +279,10 @@ header p {
   margin-bottom: 1rem;
 }
 
+#members.list .member-card img {
+  margin-bottom: 0;
+}
+
 #members.list .member-info {
   flex: 1;
 }
@@ -345,6 +349,18 @@ header p {
 #unit-toggle:active {
   background-color: #0077cc;
   border-color: #0077cc;
+}
+
+/* Visitor Info Styles */
+.visitor-info {
+  background-color: #e8f4f8;
+  border: 1px solid #b3d9e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #2c5f7a;
 }
 
 /* ⚓️ Footer */
@@ -415,37 +431,6 @@ footer {
 .form-summary li span {
   font-weight: bold;
   color: #0056b3;
-}
-
-/* 📱 Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .cta-button {
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .nav-menu.open {
-    flex-direction: column;
-  }
-
-  .forecast-cards {
-    flex-direction: column;
-  }
-
-  .forecast-card {
-    width: 100%;
-  }
-
-  .box-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #spotlight-container,
-  #members.grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .join-wrapper form {
@@ -627,6 +612,54 @@ footer {
 .chamber-name:hover {
   text-decoration: underline;
   color: #2a9df4;
+}
+
+/* 📱 MOBILE-FRIENDLY LIST VIEW FIX */
+@media (max-width: 600px) {
+  #members.list .member-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+  }
+  #members.list .member-card img {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  #members.list .member-info {
+    width: 100%;
+  }
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .cta-button {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-menu.open {
+    flex-direction: column;
+  }
+
+  .forecast-cards {
+    flex-direction: column;
+  }
+
+  .forecast-card {
+    width: 100%;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #spotlight-container,
+  #members.grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
