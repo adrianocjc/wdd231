@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover the Parnamirim Chamber of Commerce">
   <meta name="author" content="Adriano Costa">  
-  <meta property="og:title" content="Contact Parnamirim Chamber Discover">
+  <meta property="og:title" content="Discover Parnamirim Chamber Discover">
   <meta property="og:description" content="Reach out with questions, feedback, and opportunities to connect with local businesses.">
   <meta property="og:image" content="https://adrianocjc.github.io/wdd231/chamber/images/og-image.png">
   <meta property="og:url" content="https://adrianocjc.github.io/wdd231/chamber/discover.html">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body class="discover">
   <header>
     <div class="header-left">
       <img src="images/og-image.png" alt="Parnamirim Chamber Logo" class="header-logo">
@@ -41,12 +41,17 @@
     <img src="images/hero.png" alt="Parnamirim Chamber Event" loading="lazy">
   </section>
 
+  <!-- ✅ View Toggle Buttons -->
+  <div class="view-toggle">
+      <button id="gridView">Grid View</button>
+      <button id="listView">List View</button>
+    </div>
+
   <main>
-    <!-- 🚧 Under Construction Notice -->
-    <h1 class="centered">🚧 Page Under Construction</h1>
-    <section class="contact-intro">
-      <p class="centered">We're working hard to bring you a better contact experience. Please check back soon!</p>
-    </section>    
+    <aside id="visitor-message" class="visitor-info"></aside>
+
+    <!-- ✅ Discover cards will be injected here using discover.json -->
+    <section id="members" class="grid"></section>
   </main>
 
   <footer>
@@ -79,7 +84,7 @@
       </div>
     </div>
   </footer>
-  
-  <script src="scripts/script.js" defer></script>
+
+  <script src="scripts/discover.js" defer></script>
 </body>
 </html>

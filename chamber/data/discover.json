@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Cashew of Pirangi",
+    "image": "images/cashew.jpeg",
+    "address": "Av. Praia de Pirangi, Parnamirim, RN",
+    "description": "The world's largest cashew tree—spanning over 8,500 square meters!",
+    "link": "https://en.wikipedia.org/wiki/Cashew_of_Pirangi"
+  },
+  {
+    "title": "Natal Dunes State Park",
+    "image": "images/dunes_park.jpg",
+    "address": "R. Eng. Clóvis Arraes, Natal, RN",
+    "description": "Stunning nature preserve with trails and native fauna.",
+    "link": "https://en.wikipedia.org/wiki/Natal_Dunes_State_Park"
+  },
+  {
+    "title": "Pirangi Beach",
+    "image": "images/pirangi_beach.jpg",
+    "address": "Praia de Pirangi, Parnamirim, RN",
+    "description": "Popular beach destination known for warm waters, coastal scenery, and proximity to the world's largest cashew tree.",
+    "link": "https://pt.wikipedia.org/wiki/Praia_de_Pirangi"
+  },
+  {
+    "title": "Barreira do Inferno Launch Center",
+    "image": "images/launch_center.jpeg",
+    "address": "Rota do Sol, Parnamirim, RN",
+    "description": "Brazil's historic rocket launch site since 1965.",
+    "link": "https://en.wikipedia.org/wiki/Barreira_do_Inferno_Launch_Center"
+  },
+  {
+    "title": "Natal Air Force Base",
+  "image": "images/air_base.jpg",
+  "address": "Avenida Brigadeiro Souto, Parnamirim, RN",
+  "description": "Historic military installation dating back to World War II, serving as a strategic air base and hub for aerospace operations in Brazil.",
+  "link": "https://en.wikipedia.org/wiki/Natal_Air_Force_Base"
+  },
+  {
+    "title": "Parnamirim City Theater",
+    "image": "images/city_theater.jpeg",
+    "address": "Av. Castor Vieira Régis, Parnamirim, RN",
+    "description": "Local venue showcasing music, plays, and culture.",
+    "link": "https://www.instagram.com/explore/locations/504972861/cine-teatro-municipal-de-parnamirim/"
+  },
+  {
+    "title": "Aerospace Museum",
+    "image": "images/aerospace_museum.webp",
+    "address": "Rota do Sol, Parnamirim, RN",
+    "description": "Aviation museum highlighting Brazil’s aerospace history.",
+    "link": "https://pt.wikipedia.org/wiki/Museu_Aeroespacial#:~:text=O%20Museu%20Aeroespacial%20%2D%20MUSAL%20%C3%A9,Aeron%C3%A1utica%20(INCAER)%20desde%201986."
+  },
+  {
+    "title": "Parnamirim Downtown",
+    "image": "images/downtown.jpeg",
+    "address": "Centro de Parnamirim, Parnamirim, RN",
+    "description": "Central hub featuring cultural spaces, artisan markets, local events, and historic charm.",
+    "link": "https://www.instagram.com/explore/locations/234812247/centro-de-parnamirim---rn/"
+  }
+]

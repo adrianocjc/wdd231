@@ -247,6 +247,9 @@ header p {
 /* 📁 Directory Grid/List Views */
 #members.grid {
   display: grid;
+  grid-template-areas:
+    "card card card"
+    "card card card";
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 1rem;
@@ -268,6 +271,7 @@ header p {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
+  grid-area: card;
 }
 
 #members.list .member-card img,
@@ -548,6 +552,12 @@ footer {
   background-color: #00509e;
 }
 
+.card figure img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -689,5 +699,29 @@ footer {
 @media (max-width: 480px) {
   .confirmation-message {
     font-size: 1rem;
+  }
+}
+
+/* 🖱️ Hover effect only on large screens */
+@media (min-width: 1025px) {
+  .card figure img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1025px) {
+  .grid-gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
