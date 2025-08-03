@@ -1,6 +1,6 @@
-// Menu toggle
+// Menu toggle - FIXED: Changed "active" to "open"
 document.getElementById("menu-toggle").addEventListener("click", function () {
-  document.getElementById("nav-menu").classList.toggle("active");
+  document.getElementById("nav-menu").classList.toggle("open");
 });
 
 // Inline form confirmation
