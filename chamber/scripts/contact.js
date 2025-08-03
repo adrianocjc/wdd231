@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ✅ Hamburger menu toggle
+  // ✅ Hamburger toggle
   const toggleButton = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅ Inline form confirmation
+  // ✅ Form submission handling
   const form = document.getElementById("contact-form");
   const confirmation = document.getElementById("confirmation-message");
 
@@ -21,15 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅ Footer year & last modified date
+  // ✅ Footer info update
   const yearSpan = document.getElementById("year");
   const modifiedSpan = document.getElementById("lastModified");
 
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  if (modifiedSpan) {
-    modifiedSpan.textContent = document.lastModified;
-  }
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  if (modifiedSpan) modifiedSpan.textContent = document.lastModified;
 });
