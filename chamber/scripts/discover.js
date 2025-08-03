@@ -1,3 +1,13 @@
+// ✅ Hamburger Menu Toggle for Mobile Navigation
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+}
+
 // ✅ Grid/List View Toggle for Discover Page
 const gridBtn = document.getElementById("gridView");
 const listBtn = document.getElementById("listView");
@@ -32,6 +42,7 @@ if (membersContainer) {
           <p>${spot.description}</p>
           <address>📍 ${spot.address}</address>
           <a href="${spot.link}" target="_blank" rel="noopener noreferrer">Learn more</a>
+          ${spot.map ? `<a href="${spot.map}" target="_blank" rel="noopener noreferrer">📍 View on Map</a>` : ""}
         `;
 
         membersContainer.appendChild(card);
