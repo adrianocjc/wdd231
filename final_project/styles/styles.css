@@ -31,6 +31,32 @@ body {
     padding: 0 20px;
 }
 
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-teal);
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 10000;
+    border-radius: 0 0 8px 0;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden; 
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
 /* Navigation */
 .navbar {
     background: var(--white);
@@ -87,6 +113,8 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: transparent;
+    border: none;
 }
 
 .hamburger span {
@@ -429,6 +457,8 @@ h2 {
     font-size: 2rem;
     cursor: pointer;
     color: var(--text-light);
+    background: none;
+    border: none;
 }
 
 .close:hover {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Results - Marycookins</title>
+  <meta name="description" content="Your submitted form details.">
+  <meta name="theme-color" content="#4ECDC4">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    .results { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow); max-width: 800px; margin: 2rem auto; }
+    .results h1 { text-align: center; margin-bottom: 1rem; }
+    .results dl { display: grid; grid-template-columns: 1fr 2fr; gap: 0.75rem 1rem; }
+    .results dt { font-weight: 600; color: var(--text-dark); }
+    .results dd { margin: 0; color: var(--text-light); }
+    .actions { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
+    .actions a { background: var(--primary-teal); color: #fff; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; }
+    .actions a:hover { background: #3bb5ad; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>Marycookins</h1>
+          <p>Cookies & Macarons</p>
+        </div>
+        <ul class="nav-menu" id="primaryMenu">
+          <li><a href="project.html" class="nav-link">Home</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="order.html" class="nav-link">Order</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Form Submission</h1>
+        <p>Here are the details you submitted</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="results" id="results" aria-live="polite">
+          <h1>Submitted Data</h1>
+          <dl id="resultsList"></dl>
+          <div class="actions">
+            <a href="order.html" aria-label="Back to Order page">Back to Order</a>
+            <a href="contact.html" aria-label="Back to Contact page">Back to Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Marycookins. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    // Display URLSearchParams in a definition list
+    (function () {
+      const dl = document.getElementById('resultsList');
+      const params = new URLSearchParams(window.location.search);
+      const entries = Array.from(params.entries());
+
+      if (entries.length === 0) {
+        dl.innerHTML = '<dt>No data found</dt><dd>Please submit the form first.</dd>';
+        return;
+      }
+
+      // Persist a bit of user context for future use
+      const name = params.get('customerName') || params.get('contactName');
+      const email = params.get('email') || params.get('contactEmail');
+      if (name) localStorage.setItem('mcUserName', name);
+      if (email) localStorage.setItem('mcUserEmail', email);
+
+      dl.innerHTML = entries.map(([key, value]) => `
+        <dt>${key}</dt><dd>${value || '-'}</dd>
+      `).join('');
+    })();
+  </script>
+</body>
+</html>

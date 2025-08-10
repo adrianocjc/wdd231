@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery - Marycookins</title>
+  <meta name="description" content="Explore Marycookins gallery of handcrafted cookies and macarons categorized by events like weddings, birthdays, and holidays.">
+  <meta name="theme-color" content="#4ECDC4">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>Marycookins</h1>
+          <p>Cookies & Macarons</p>
+        </div>
+        <ul class="nav-menu" id="primaryMenu">
+          <li><a href="project.html" class="nav-link">Home</a></li>
+          <li><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="order.html" class="nav-link">Order</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Our Gallery</h1>
+        <p>Explore our beautiful collection of handcrafted cookies and macarons</p>
+      </div>
+    </section>
+
+    <section class="gallery-filters">
+      <div class="container">
+        <div class="filter-buttons" role="tablist" aria-label="Filter gallery">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="cookies" role="tab" aria-selected="false">Cookies</button>
+          <button class="filter-btn" data-filter="macarons" role="tab" aria-selected="false">Macarons</button>
+          <button class="filter-btn" data-filter="weddings" role="tab" aria-selected="false">Weddings</button>
+          <button class="filter-btn" data-filter="birthdays" role="tab" aria-selected="false">Birthdays</button>
+          <button class="filter-btn" data-filter="holidays" role="tab" aria-selected="false">Holidays</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-grid" aria-labelledby="galleryHeading">
+      <div class="container">
+        <h2 id="galleryHeading" class="visually-hidden">Gallery Items</h2>
+        <div class="gallery-items" id="galleryItems" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <div class="modal-content">
+        <button class="close" id="modalClose" aria-label="Close modal" type="button">&times;</button>
+        <img id="modalImage" src="" alt="">
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Marycookins</h3>
+          <p>Creating edible art that brings joy to every celebration</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+            <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Marycookins. All rights reserved. | <a href="references.html">References</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
